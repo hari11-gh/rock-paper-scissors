@@ -185,6 +185,61 @@ input:checked + .slider:before {
   transform: translateX(24px);
 }
 
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    margin: 40px auto;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .hands {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #vs {
+    margin: 10px 0;
+  }
+
+  .choices button {
+    margin: 10px 5px;
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .hand {
+    width: 80px;
+    height: 80px;
+  }
+
+  .theme-toggle-container {
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .switch {
+    width: 40px;
+    height: 20px;
+  }
+
+  .slider:before {
+    height: 16px;
+    width: 16px;
+    bottom: 2px;
+    left: 2px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(18px);
+  }
+}
+
 
 
 
