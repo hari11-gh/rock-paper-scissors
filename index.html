@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rock Paper Scissors</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+<div class="theme-toggle-container">
+  <span class="toggle-label">Dark Mode</span>
+  <label class="switch">
+    <input type="checkbox" id="theme-toggle" onchange="toggleTheme()" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+
   <div class="container">
     <h1>Rock Paper Scissors ✊✋✌️</h1>
-    <div class="buttons">
-      <button onclick="play('rock')">🪨 Rock</button>
-      <button onclick="play('paper')">📄 Paper</button>
-      <button onclick="play('scissors')">✂️ Scissors</button>
+
+    <div class="scoreboard">
+      <p>You: <span id="user-score">0</span></p>
+      <p>Computer: <span id="computer-score">0</span></p>
+    </div>
+
+    <div class="hands">
+      <img id="user-hand" class="hand" src="assets/rock.png" alt="Your choice">
+      <div id="vs">vs</div>
+      <img id="computer-hand" class="hand" src="assets/rock.png" alt="Computer choice">
     </div>
 
     <div class="result">
-      <p id="user-choice">Your choice: -</p>
-      <p id="computer-choice">Computer's choice: -</p>
       <p id="winner">Result: -</p>
     </div>
 
-    <div class="score">
-      <p>Score: You <span id="user-score">0</span> - <span id="computer-score">0</span> Computer</p>
+    <div class="choices">
+      <button onclick="play('rock')">Rock</button>
+      <button onclick="play('paper')">Paper</button>
+      <button onclick="play('scissors')">Scissors</button>
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
+
